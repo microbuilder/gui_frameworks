@@ -14,3 +14,10 @@ For glade GUI editor:
 $ brew install glade
 $ glade
 ```
+
+## ToDo:
+
+- Review GTK libraries:
+  - `gtkextra` (LGPL GUI widgets including basic plots)
+  - `gtksourceview`
+  - `gtkdatabox`

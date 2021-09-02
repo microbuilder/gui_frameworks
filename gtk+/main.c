@@ -11,9 +11,19 @@ static void activate(GtkApplication *app, gpointer user_data)
 	GtkWidget *button;
 	GtkWidget *button_box;
 
+
 	window = gtk_application_window_new(app);
 	gtk_window_set_title(GTK_WINDOW(window), "Window");
-	gtk_window_set_default_size(GTK_WINDOW(window), 800, 480);
+
+	// Set start size, but keep resizable
+	// gtk_window_set_default_size(GTK_WINDOW(window), 800, 480);
+
+	// Fix size (can't make smaller)
+	gtk_widget_set_size_request(GTK_WIDGET(window), 800, 480);
+	gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
+
+	// Make full screen
+	// gtk_window_fullscreen(GTK_WINDOW(window));
 
 	button_box = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
 	gtk_container_add(GTK_CONTAINER(window), button_box);
