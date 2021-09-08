@@ -1,5 +1,7 @@
 # GTK
 
+## OS X
+
 ```bash
 $ brew install gtk+3
 ```
@@ -13,6 +15,12 @@ For glade GUI editor:
 ```bash
 $ brew install glade
 $ glade
+```
+
+## Ubuntu 20.04
+
+```bash
+$ sudo apt-get install libgtk-3-dev
 ```
 
 ## ToDo:

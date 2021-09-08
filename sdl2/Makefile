@@ -1,8 +1,8 @@
 appname := app
 
 CXX      := g++
-CXXFLAGS := -std=c++11 $(shell pkg-config --cflags SDL2 SDL2_ttf SDL2_image)
-LDFLAGS  = $(shell pkg-config --libs SDL2 SDL2_ttf SDL2_image)
+CXXFLAGS := -std=c++11 $(shell pkg-config --cflags sdl2 SDL2_ttf SDL2_image)
+LDFLAGS  = $(shell pkg-config --libs sdl2 SDL2_ttf SDL2_image)
 
 srcfiles := $(shell find . -name "*.cpp")
 objects  := $(patsubst %.cpp, %.o, $(srcfiles))
