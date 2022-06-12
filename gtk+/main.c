@@ -1,5 +1,8 @@
 #include <gtk/gtk.h>
 
+#define WINDOW_W (1280)
+#define WINDOW_H (720)
+
 static void print_hello(GtkWidget *widget, gpointer data)
 {
 	g_print("Hello World\n");
@@ -11,15 +14,14 @@ static void activate(GtkApplication *app, gpointer user_data)
 	GtkWidget *button;
 	GtkWidget *button_box;
 
-
 	window = gtk_application_window_new(app);
 	gtk_window_set_title(GTK_WINDOW(window), "Window");
 
 	// Set start size, but keep resizable
-	// gtk_window_set_default_size(GTK_WINDOW(window), 800, 480);
+	// gtk_window_set_default_size(GTK_WINDOW(window), WINDOW_W, WINDOW_H);
 
 	// Fix size (can't make smaller)
-	gtk_widget_set_size_request(GTK_WIDGET(window), 800, 480);
+	gtk_widget_set_size_request(GTK_WIDGET(window), WINDOW_W, WINDOW_H);
 	gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
 
 	// Make full screen
