@@ -5,7 +5,7 @@
 Make sure you have GTK+3 libraries installed:
 
 ```bash
-$ brew install gtk-mac-integration gtk+3
+$ brew install cairo libjpeg gtk-mac-integration gtk+3
 ```
 
 Add the gotk3 wrapper:

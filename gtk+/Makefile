@@ -1,6 +1,6 @@
 appname  = app
 
-CC      := gcc-11
+CC      := gcc
 CFLAGS  := -Wall -D_GNU_SOURCE=1 -D_THREAD_SAFE -std=c99
 CFLAGS  += $(shell pkg-config --cflags gtk+-3.0)
 LDFLAGS += $(shell pkg-config --libs gtk+-3.0)
